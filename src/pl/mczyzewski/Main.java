@@ -8,6 +8,7 @@ public class Main
 
         int totalScore = calculateScore("Michał", 200);
         System.out.println("Your total score is " + totalScore);
+        calculateScore(323);
 
     }
 
@@ -19,7 +20,7 @@ public class Main
 
     public static int calculateScore( int score)
     {
-        System.out.println("Unnamed Player scored" + score + " points ");
+        System.out.println("Unnamed Player scored " + score + " points ");
         return score * 1000;
     }
 }
