@@ -6,11 +6,11 @@ public class Main
     public static void main(String[] args)
     {
 
-        int totalScore = calculateScore("Michał", 200);
-        System.out.println("Your total score is " + totalScore);
-        calculateScore(323);
-        calcFeetAndInchesToCentimeters(-4, 0);
-
+//        int totalScore = calculateScore("Michał", 200);
+//        System.out.println("Your total score is " + totalScore);
+//        calculateScore(323);
+        calcFeetAndInchesToCentimeters(13);
+        calcFeetAndInchesToCentimeters(100);
 
     }
 
@@ -61,9 +61,9 @@ public class Main
 
     public static double calcFeetAndInchesToCentimeters(double feet, double inches)
     {
-        if ((feet <= 0) || ((inches <= 0 && inches >= 12)))
+        if ((feet <= 0) || ((inches <= 0 || inches >= 12)))
         {
-            System.out.println("Involid feet or inches");
+            System.out.println("Involid feet or inches parameters");
             return -1;
         }
 
@@ -74,5 +74,17 @@ public class Main
 
 
     }
+    public static double calcFeetAndInchesToCentimeters( double inches)
+    {
+        if (inches < 0 )
+        {
+            return -1;
+        }
+        double feet = (int)inches /12;
+        double remainingInches = (int) inches % 12;
+        System.out.println(inches + " inchec are " + feet + " feet and " + remainingInches+ "inches");
+        return calcFeetAndInchesToCentimeters(feet,remainingInches);
+    }
+
 }
 
