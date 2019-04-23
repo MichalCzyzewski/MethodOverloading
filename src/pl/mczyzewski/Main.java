@@ -10,6 +10,7 @@ public class Main
         System.out.println("Your total score is " + totalScore);
         calculateScore(323);
 
+
     }
 
     public static int calculateScore(String playername, int score)
@@ -22,5 +23,11 @@ public class Main
     {
         System.out.println("Unnamed Player scored " + score + " points ");
         return score * 1000;
+    }
+
+    public static int calculateScore()
+    {
+        System.out.println("No Player scored");
+        return 0;
     }
 }
