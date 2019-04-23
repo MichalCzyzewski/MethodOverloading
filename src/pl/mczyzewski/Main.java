@@ -9,7 +9,7 @@ public class Main
         int totalScore = calculateScore("Michał", 200);
         System.out.println("Your total score is " + totalScore);
         calculateScore(323);
-        System.out.println(calcFeetAndInchesToCentimeters(23, 33) + "cm");
+        calcFeetAndInchesToCentimeters(6, 0);
 
 
     }
@@ -61,22 +61,17 @@ public class Main
 
     public static double calcFeetAndInchesToCentimeters(double feet, double inches)
     {
-        if((feet <= 0) ||inches <= 0 && inches >=12 )
+        if ((feet <= 0) || ((inches <= 0 && inches >= 12)))
         {
-            return -1
+            return -1;
         }
 
+        double centimeters = (feet * (12 * 2.54));
+        centimeters += inches * 2.54;
+        System.out.println(feet + " feet, " + inches + " inches = " + centimeters + " cm");
+        return centimeters;
 
 
     }
-    public static double calcFeetAndInchesToCentimeters(double inches)
-{
-    if (inches <= 0)
-    {
-        return inches * 2.54;
-
-    }
-    return -1;
-}
 }
 
