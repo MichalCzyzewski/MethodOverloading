@@ -13,7 +13,7 @@ public class Main
 
     public static int calculateScore(String playername, int score)
     {
-        System.out.println("Player " + playername + " score " + score + " score points ");
+        System.out.println("Player " + playername + " score " + score + " points ");
         return score * 1000;
     }
 }
