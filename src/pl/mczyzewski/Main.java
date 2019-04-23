@@ -6,8 +6,8 @@ public class Main
     public static void main(String[] args)
     {
 
-        calculateScore("Michał", 200);
-
+       int totalScore = calculateScore("Michał", 200);
+        System.out.println("Your total score is " + totalScore);
 
     }
 
