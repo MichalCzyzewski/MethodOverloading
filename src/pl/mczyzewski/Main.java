@@ -9,7 +9,7 @@ public class Main
         int totalScore = calculateScore("Michał", 200);
         System.out.println("Your total score is " + totalScore);
         calculateScore(323);
-        calcFeetAndInchesToCentimeters(6, 0);
+        calcFeetAndInchesToCentimeters(-4, 0);
 
 
     }
@@ -63,6 +63,7 @@ public class Main
     {
         if ((feet <= 0) || ((inches <= 0 && inches >= 12)))
         {
+            System.out.println("Involid feet or inches");
             return -1;
         }
 
